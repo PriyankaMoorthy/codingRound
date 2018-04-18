@@ -10,7 +10,7 @@ public class SignInTest extends BrowserFactory{
     @Test
     public void shouldThrowAnErrorIfSignInDetailsAreMissing() {
 
-        waitFor(2000);
+        SyncWait.waitFor(2000);
 
         driver.findElement(By.linkText("Your trips")).click();
         driver.findElement(By.id("SignIn")).click();
@@ -19,7 +19,6 @@ public class SignInTest extends BrowserFactory{
 
         String errors1 = driver.findElement(By.id("errors1")).getText();
         Assert.assertTrue(errors1.contains("There were errors in your submission"));
-        //driver.quit();
     }
 
 }
