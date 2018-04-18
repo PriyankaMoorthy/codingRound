@@ -29,9 +29,9 @@ private void setDriverPath() {
 			  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 }
 		
-		@AfterClass
-		public void closeBrowser()
-		{
-			driver.quit();
-		}
+@AfterClass
+public void closeBrowser()
+	{
+   		 driver.quit();
+	}
 }
