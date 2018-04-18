@@ -1,7 +1,4 @@
-#Description : This file consists of below information.
-#1. Application url.
-#2. Application Login informations like Username and password.
-#3. Validation Messages.
+#Description : This file consists of global data.
 
 App_URL=https://www.cleartrip.com/
 Error_Message=There were errors in your submission
