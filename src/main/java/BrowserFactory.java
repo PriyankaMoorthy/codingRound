@@ -22,11 +22,10 @@ private void setDriverPath() {
         }
         
         Generic_Class gc= new Generic_Class();
-        driver.get(gc.getPropertyValue("App_URL"));
-	        
-			  driver.manage().window().maximize();
-				
-			  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+	setDriverPath();
+        driver.get(gc.getPropertyValue("App_URL"));  
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 }
 		
 @AfterClass
