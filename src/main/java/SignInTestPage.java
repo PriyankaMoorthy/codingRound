@@ -6,15 +6,35 @@ import org.openqa.selenium.support.FindBy;
 public class SignInTestPage {
   
   @FindBy (linkText = "Your trips")
-  private static WebElement Yourtripslink;
+  private WebElement yourTripsLink;
   @FindBy (id = "SignIn")
-  private static WebElement signIn;
+  private WebElement signIn;
   @FindBy (id = "signInButton")
-  private static WebElement signInButton;
+  private WebElement signInButton;
   @FindBy (id = "errors1")
-  private static WebElement ErrorText;
+  private WebElement errorText;
   
-        String errors1 = driver.findElement(By.id("errors1")).getText();
-        Assert.assertTrue(errors1.contains("There were errors in your submission"));
+  public void get_yourtripslinktext()
+  {
+    yourTripsLink.click();
+  }
+  
+  public void get_Signin()
+  {
+    signIn.click();
+  }
+  
+  public void get_Signinbuttn()
+  {
+    signInButton.click();
+  }
+  
+  public String get_errortext()
+  {
+	return errorText.getText();
+  }
+  
+        //String errors1 = driver.findElement(By.id("errors1")).getText();
+        //Assert.assertTrue(errors1.contains("There were errors in your submission"));
 
 }
