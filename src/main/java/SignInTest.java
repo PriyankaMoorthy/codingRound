@@ -20,7 +20,7 @@ public class SignInTest extends BrowserFactory{
         clearTrip.get_Signinbuttn();
         
         String message = clearTrip.get_errortext();
-        Assert.assertTrue(errors1.contains("There were errors in your submission"));
+        Assert.assertTrue(message.contains("There were errors in your submission"));
     }
 
 }
