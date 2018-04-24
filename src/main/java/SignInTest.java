@@ -15,14 +15,11 @@ public class SignInTest extends BrowserFactory{
         
         SignInTestPage clearTrip = new SignInTestPage(driver);
         
-        clearTrip.
+        clearTrip.get_yourtripslinktext();
+        clearTrip.get_Signin();
+        clearTrip.get_Signinbuttn();
         
-        driver.findElement(By.linkText("Your trips")).click();
-        driver.findElement(By.id("SignIn")).click();
-
-        driver.findElement(By.id("signInButton")).click();
-
-        String errors1 = driver.findElement(By.id("errors1")).getText();
+        String message = clearTrip.get_errortext();
         Assert.assertTrue(errors1.contains("There were errors in your submission"));
     }
 
