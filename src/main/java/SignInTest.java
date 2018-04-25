@@ -15,9 +15,9 @@ public class SignInTest extends BrowserFactory{
         
         SignInTestPage clearTrip = new SignInTestPage(driver);
         
-        clearTrip.get_yourtripslinktext();
-        clearTrip.get_Signin();
-        clearTrip.get_Signinbuttn();
+        clearTrip.get_ClickSigninbuttn();
+        clearTrip.get_ClickSignin();
+        clearTrip.get_ClickSigninbuttn();
         
         String message = clearTrip.get_errortext();
         Assert.assertTrue(message.contains("There were errors in your submission"));
