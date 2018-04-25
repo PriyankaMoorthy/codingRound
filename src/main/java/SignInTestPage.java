@@ -23,17 +23,17 @@ public class SignInTestPage {
      PageFactory.initElements(driver, this);
   }
   
-  public void get_yourtripslinktext()
+  public void get_ClickYourtripslinktext()
   {
     yourTripsLink.click();
   }
   
-  public void get_Signin()
+  public void get_ClickSignin()
   {
     signIn.click();
   }
   
-  public void get_Signinbuttn()
+  public void get_ClickSigninbuttn()
   {
     signInButton.click();
   }
@@ -43,7 +43,4 @@ public class SignInTestPage {
 	return errorText.getText();
   }
   
-        //String errors1 = driver.findElement(By.id("errors1")).getText();
-        //Assert.assertTrue(errors1.contains("There were errors in your submission"));
-
 }
