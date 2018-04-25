@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HotelBookingTest() {
+public class HotelBookingTestPage() {
   
 WebDriver driver;
 	
@@ -17,7 +17,7 @@ private WebElement searchButton;
 @FindBy(id = "travellersOnhome")
 private WebElement travellerSelection;
 	
-public HotelBookingTest(WebDriver driver)
+public HotelBookingTestPage(WebDriver driver)
   {
      this.driver=driver;
      PageFactory.initElements(driver, this);
