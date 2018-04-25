@@ -8,7 +8,7 @@ public class FlightBookingTestPage {
   
   WebDriver driver;
 
-  public HotelBookingTest(WebDriver driver)
+  public FlightBookingTest(WebDriver driver)
   {
      this.driver=driver;
      PageFactory.initElements(driver, this);
