@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
 public class HotelBookingTest() {
   
 WebDriver driver;
@@ -27,4 +26,17 @@ public HotelBookingTest(WebDriver driver)
      PageFactory.initElements(driver, this);
   }
 
+public void get_HotelLink_Click()
+{
+	hotelLink.click();
+}
+
+public void get_LocalityTxtBox_Click()
+{
+	localityTextBox.click();
+}
 	
+public void get_SearchButton_Click()
+{
+	searchButton.click();
+}
