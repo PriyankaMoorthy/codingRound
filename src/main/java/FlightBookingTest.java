@@ -11,7 +11,6 @@ import java.util.List;
 
 public class FlightBookingTest extends BrowserFactory {
 
-    WebDriver driver = new ChromeDriver();
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
 
