@@ -7,3 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 public class FlightBookingTestPage {
   
   WebDriver driver;
+
+  public HotelBookingTest(WebDriver driver)
+  {
+     this.driver=driver;
+     PageFactory.initElements(driver, this);
+  }
+  
+  
