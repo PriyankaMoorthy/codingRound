@@ -13,7 +13,7 @@ public class HotelBookingTest extends BrowserFactory{
         clearTripHotelBooking.get_ClickHotelLink();
         clearTripHotelBooking.get_ClickLocalityTxtBox();
         clearTripHotelBooking.get_LocalityTxtBox(gc.getPropertyValue("LocalityText"));
-        //new Select(travellerSelection).selectByVisibleText("1 room, 2 adults");
+        new Select(travellerSelection).selectByVisibleText(gc.getPropertyValue(""));
         clearTripHotelBooking.get_ClickSearchButton();
     }
 }
