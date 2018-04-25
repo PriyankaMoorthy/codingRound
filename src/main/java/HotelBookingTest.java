@@ -8,20 +8,6 @@ import org.testng.annotations.Test;
 
 public class HotelBookingTest {
 
-    WebDriver driver = new ChromeDriver();
-
-    @FindBy(linkText = "Hotels")
-    private WebElement hotelLink;
-
-    @FindBy(id = "Tags")
-    private WebElement localityTextBox;
-
-    @FindBy(id = "SearchHotelsButton")
-    private WebElement searchButton;
-
-    @FindBy(id = "travellersOnhome")
-    private WebElement travellerSelection;
-
     @Test
     public void shouldBeAbleToSearchForHotels() {
         setDriverPath();
