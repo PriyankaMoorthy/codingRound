@@ -5,14 +5,26 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-      @FindBy(linkText = "Hotels")
-	    private WebElement hotelLink;
+public class HotelBookingTest() {
+  
+WebDriver driver;
+	
+@FindBy(linkText = "Hotels")
+private WebElement hotelLink;
 
-	    @FindBy(id = "Tags")
-	    private WebElement localityTextBox;
+@FindBy(id = "Tags")
+private WebElement localityTextBox;
+	
+@FindBy(id = "SearchHotelsButton")
+private WebElement searchButton;
 
-	    @FindBy(id = "SearchHotelsButton")
-	    private WebElement searchButton;
+@FindBy(id = "travellersOnhome")
+private WebElement travellerSelection;
+	
+public HotelBookingTest(WebDriver driver)
+  {
+     this.driver=driver;
+     PageFactory.initElements(driver, this);
+  }
 
-	    @FindBy(id = "travellersOnhome")
-	    private WebElement travellerSelection;
+	
