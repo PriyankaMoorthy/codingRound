@@ -10,13 +10,10 @@ WebDriver driver;
 	
 @FindBy(linkText = "Hotels")
 private WebElement hotelLink;
-
 @FindBy(id = "Tags")
-private WebElement localityTextBox;
-	
+private WebElement localityTextBox;	
 @FindBy(id = "SearchHotelsButton")
 private WebElement searchButton;
-
 @FindBy(id = "travellersOnhome")
 private WebElement travellerSelection;
 	
@@ -26,11 +23,11 @@ public HotelBookingTest(WebDriver driver)
      PageFactory.initElements(driver, this);
   }
 
-public void get_HotelLink_Click()
+public void get_ClickHotelLink()
 {
 	hotelLink.click();
 }
-public void get_LocalityTxtBox_Click()
+public void get_ClickLocalityTxtBox()
 {
 	localityTextBox.click();
 }
@@ -38,11 +35,11 @@ public void get_LocalityTxtBox(String localityText)
 {
 	localityTextBox.sendKeys(localityText);
 }
-public void get_TravellerSelection_Click()
+public void get_ClickTravellerSelection()
 {
-	travellerSelection.click();
+	travellerSelection.click(); 
 }
-public void get_SearchButton_Click()
+public void get_ClickSearchButton()
 {
 	searchButton.click();
 }
