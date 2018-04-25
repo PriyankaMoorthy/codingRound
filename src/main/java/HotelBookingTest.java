@@ -6,17 +6,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class HotelBookingTest {
+public class HotelBookingTest extends BrowserFactory{
 
     @Test
-    public void shouldBeAbleToSearchForHotels() {
-        setDriverPath();
-
-        driver.get("https://www.cleartrip.com/");
-        hotelLink.click();
-
-        localityTextBox.sendKeys("Indiranagar, Bangalore");
-
+    public void shouldBeAbleToSearchForHotels() throws InterruptedException {
+        
+        Generic_Class gc= new Generic_Class();
+        HotelBookingTest clearTripHotelBooking = new HotelBookingTest(driver);
+        
+        clearTripHotelBooking.get_ClickHotelLink();
+        clearTripHotelBooking.get_ClickLocalityTxtBox();
+        clearTripHotelBooking.get_LocalityTxtBox(gc.getPropertyValue(""));
+        
+        //localityTextBox.sendKeys("Indiranagar, Bangalore");
         new Select(travellerSelection).selectByVisibleText("1 room, 2 adults");
         searchButton.click();
 
