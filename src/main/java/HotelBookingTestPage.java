@@ -30,13 +30,20 @@ public void get_HotelLink_Click()
 {
 	hotelLink.click();
 }
-
 public void get_LocalityTxtBox_Click()
 {
 	localityTextBox.click();
 }
-	
+public void get_LocalityTxtBox(String localityText)
+{
+	localityTextBox.sendKeys(localityText);
+}
+public void get_TravellerSelection_Click()
+{
+	travellerSelection.click();
+}
 public void get_SearchButton_Click()
 {
 	searchButton.click();
 }
+
