@@ -15,31 +15,27 @@ public class FlightBookingTest extends BrowserFactory {
     public void testThatResultsAppearForAOneWayJourney() {
 
         SyncWait.waitFor(2000);
-        driver.findElement(By.id("OneWay")).click();
-
-        driver.findElement(By.id("FromTag")).clear();
-        driver.findElement(By.id("FromTag")).sendKeys("Bangalore");
-
+        Generic_Class gc= new Generic_Class();
+		FlightBookingTest clearTripFlightBooking = new FlightBookingTest(driver);
+		SyncWait.waitFor(2000);
+		clearTripFlightBooking.get_OneWayRadioBtnClick();
+		clearTripFlightBooking.get_FromTagTextBoxClear();
+		clearTripFlightBooking.get_FromTagTextBox(gc.getPropertyValue("FromText"));
+        
         //wait for the auto complete options to appear for the origin
-
         SyncWait.waitFor(2000);
-        List<WebElement> originOptions = driver.findElement(By.id("ui-id-1")).findElements(By.tagName("li"));
-        originOptions.get(0).click();
-
-        driver.findElement(By.id("toTag")).clear();
-        driver.findElement(By.id("toTag")).sendKeys("Delhi");
-
+        clearTripFlightBooking.sel_orginOptions();
+        clearTripFlightBooking.get_ToTagTextBoxClear();
+        clearTripFlightBooking.get_ToTagTextBox(gc.getPropertyValue("ToText"));
+        
         //wait for the auto complete options to appear for the destination
-
         SyncWait.waitFor(2000);
         //select the first item from the destination auto complete list
-        List<WebElement> destinationOptions = driver.findElement(By.id("ui-id-2")).findElements(By.tagName("li"));
-        destinationOptions.get(0).click();
-
-        driver.findElement(By.xpath("//*[@id='ui-datepicker-div']/div[1]/table/tbody/tr[3]/td[7]/a")).click();
+        clearTripFlightBooking.sel_destinationOptions();
+        clearTripFlightBooking.get_DatePicker();
 
         //all fields filled in. Now click on search
-        driver.findElement(By.id("SearchBtn")).click();
+        clearTripFlightBooking.get_ClickSearchBtn();
 
         SyncWait.waitFor(5000);
         //verify that result appears for the provided journey search
