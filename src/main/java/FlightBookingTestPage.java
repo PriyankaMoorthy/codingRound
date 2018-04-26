@@ -79,3 +79,8 @@ public class FlightBookingTestPage {
 	List<WebElement> lst1= destinationOptions;
 	destinationOptions.get(0).click();
   }
+  
+  public boolean verify_searchSummary()
+  {	
+	return searchSummaryelt.isDisplayed();
+  }
