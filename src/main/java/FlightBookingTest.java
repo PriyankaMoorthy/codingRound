@@ -37,7 +37,7 @@ public class FlightBookingTest extends BrowserFactory {
 
         SyncWait.waitFor(5000);
         //verify that result appears for the provided journey search
-        Assert.assertTrue(isElementPresent(By.className("searchSummary")));
+        Assert.assertTrue(isElementPresent("searchSummaryelt"));
 
     }
     
