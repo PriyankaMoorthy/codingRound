@@ -2,8 +2,6 @@ import com.sun.javafx.PlatformUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,13 +12,13 @@ public class FlightBookingTest extends BrowserFactory {
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
 
-        SyncWait.waitFor(2000);
         Generic_Class gc= new Generic_Class();
-		FlightBookingTest clearTripFlightBooking = new FlightBookingTest(driver);
-		SyncWait.waitFor(2000);
-		clearTripFlightBooking.get_OneWayRadioBtnClick();
-		clearTripFlightBooking.get_FromTagTextBoxClear();
-		clearTripFlightBooking.get_FromTagTextBox(gc.getPropertyValue("FromText"));
+	FlightBookingTest clearTripFlightBooking = new FlightBookingTest(driver);
+	    
+	SyncWait.waitFor(2000);
+	clearTripFlightBooking.get_OneWayRadioBtnClick();
+	clearTripFlightBooking.get_FromTagTextBoxClear();
+	clearTripFlightBooking.get_FromTagTextBox(gc.getPropertyValue("FromText"));
         
         //wait for the auto complete options to appear for the origin
         SyncWait.waitFor(2000);
