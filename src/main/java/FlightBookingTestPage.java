@@ -18,6 +18,8 @@ public class FlightBookingTestPage {
   private WebElement searchBtn;
   @FindBy (xpath = "//*[@id='ui-datepicker-div']/div[1]/table/tbody/tr[3]/td[7]/a")
   private WebElement datePicker;
+  @FindBy (xpath = "//*[@id='ui-id-1']/li")
+  private List<WebElement> orginOptions;
   @FindBy (xpath = "//*[@id='ui-id-2']/li")
   private List<WebElement> destinationOptions;
   @FindBy (className = "searchSummary")
@@ -44,9 +46,9 @@ public class FlightBookingTestPage {
 	   fromTagTextBox.sendKeys(fromText);
   }
   
-  public void get_ToTagTextBoxClick()
+  public void get_ToTagTextBoxClear()
   {
-	   toTagTextBox.click();
+	   toTagTextBox.clear();
   }
   
   public void get_ToTagTextBox(String toText)
@@ -63,11 +65,19 @@ public class FlightBookingTestPage {
   {
 	   searchBtn.click();
   }
+	
+  public void sel_orginOptions()
+  {	
+	List<WebElement> lst= orginOptions;
+	orginOptions.get(0).click();
+  }
+	
   public void sel_destinationOptions()
   {	
-	List<WebElement> lst= destinationOptions;
+	List<WebElement> lst1= destinationOptions;
 	destinationOptions.get(0).click();
   }
+ 
   public boolean get_SearchSummary()
   {
 	return searchSummaryelt.isDisplayed();
