@@ -34,14 +34,9 @@ public class FlightBookingTestPage {
 	   selectOneWayRadioBtn.click();
   }
   
-  public void get_FromTagTextBoxClick()
+  public void get_FromTagTextBoxClear()
   {
-	   fromTagTextBox.click();
-  }
-  
-  public void get_FromTagTextBoxClick()
-  {
-	   fromTagTextBox.click();
+	   fromTagTextBox.clear();
   }
   
   public void get_FromTagTextBox(String fromText)
